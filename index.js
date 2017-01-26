@@ -3,19 +3,19 @@
 const fs = require('fs-extra');
 
 module.exports = function(filename) {
-    let arr = [];
+	let arr = [];
 
-    if (fs.existsSync(filename)) {
-        let lines = fs.readFileSync(filename).toString().split(/\r?\n|\r/);
+	if (fs.existsSync(filename)) {
+		let lines = fs.readFileSync(filename).toString().split(/\r?\n|\r/);
 
-        lines.forEach(function(line) {
-            line = line.trim();
+		lines.forEach(function(line) {
+			line = line.trim();
 
-            if (!line.startsWith('#') && line !== '') {
-                arr.push(line);
-            }
-        });
-    }
+			if (!line.startsWith('#') && line !== '') {
+				arr.push(line);
+			}
+		});
+	}
 
-    return arr;
+	return arr;
 };
