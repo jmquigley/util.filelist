@@ -1,55 +1,55 @@
 {
-	"name": "util.filelist",
-	"version": "0.0.3",
-	"author": "jmquigley <jmquigley@outlook.com>",
-	"description": "Reads a file list and returns it as an array of values.",
-	"private": false,
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jmquigley/util.filelist"
-	},
-	"bugs": {
-		"url": "https://github.com/jmquigley/util.filelist/issues"
-	},
-	"engines": {
-		"node": ">=6.5"
-	},
-	"dependencies": {
-		"fs-extra": "^2.0.0"
-	},
-	"devDependencies": {
-		"ava": "^0.17.0",
-		"xo": "^0.17.1"
-	},
-	"main": "index.js",
-	"scripts": {
-		"test": "xo && ava --verbose"
-	},
-	"xo": {
-		"env": {
-			"browser": true,
-			"node": true,
-			"es6": true
-		},
-		"global": [
-			"window",
-			"describe",
-			"it",
-			"JSON"
-		],
-		"rules": {
-			"space-before-function-paren": "off",
-			"unicorn/filename-case": [
-				"error",
-				{
-					"case": "snakeCase"
-				}
-			],
-			"arrow-parens": [
-				"error",
-				"as-needed"
-			]
-		}
-	}
+  "name": "util.filelist",
+  "version": "0.0.4",
+  "author": "jmquigley <jmquigley@outlook.com>",
+  "description": "Reads a file list and returns it as an array of values.",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmquigley/util.filelist"
+  },
+  "bugs": {
+    "url": "https://github.com/jmquigley/util.filelist/issues"
+  },
+  "engines": {
+    "node": ">=6.5"
+  },
+  "dependencies": {
+    "fs-extra": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && ava --verbose"
+  },
+  "xo": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "global": [
+      "window",
+      "describe",
+      "it",
+      "JSON"
+    ],
+    "rules": {
+      "space-before-function-paren": "off",
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "snakeCase"
+        }
+      ],
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ]
+    }
+  }
 }
