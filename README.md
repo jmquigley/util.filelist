@@ -1,4 +1,4 @@
-# util.filelist [![Build Status](https://travis-ci.org/jmquigley/util.filelist.svg?branch=master)](https://travis-ci.org/jmquigley/util.filelist) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/badge/npm-v0.0.3-blue.svg)](https://www.npmjs.com/package/meshwork)
+# util.filelist [![Build Status](https://travis-ci.org/jmquigley/util.filelist.svg?branch=master)](https://travis-ci.org/jmquigley/util.filelist) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/badge/npm-v0.0.3-blue.svg)](https://www.npmjs.com/package/util.filelist)
 
 > Reads a file list and returns it as an array of values.
 
