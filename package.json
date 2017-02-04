@@ -19,12 +19,12 @@
     "expand-home-dir": "0.0.3",
     "fs-extra": "^2.0.0",
     "util.pkgwrap": "0.0.5",
-    "util.rstrip": "0.0.6",
+    "util.rstrip": "0.0.7",
     "uuid": "^3.0.1",
     "yargs": "^6.6.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.1",
     "coveralls": "^2.11.15",
     "nyc": "^10.1.2",
     "xo": "^0.17.1"
