@@ -1,14 +1,14 @@
 'use strict';
 
-const fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
-module.exports = function(filename) {
-	let arr = [];
+export function getFileList(filename: string) {
+	let arr: string[] = [];
 
 	if (fs.existsSync(filename)) {
 		let lines = fs.readFileSync(filename).toString().split(/\r?\n|\r/);
 
-		lines.forEach(function(line) {
+		lines.forEach((line) => {
 			line = line.trim();
 
 			if (!line.startsWith('#') && line !== '') {
@@ -18,4 +18,4 @@ module.exports = function(filename) {
 	}
 
 	return arr;
-};
+}

@@ -2,9 +2,7 @@
 
 > Reads a file list and returns it as an array of values.
 
-Reads a given file list, stores each line in an array, and returns the
-array.  It ignore blank lines and comments (`#` character).  Each line is
-delimited by the newline characters.
+Reads a given file list, stores each line in an array, and returns the array.  It ignore blank lines and comments (`#` character).  Each line is delimited by the newline characters.
 
 ## Installation
 
@@ -16,6 +14,11 @@ $ npm install --global util.filelist
 To install as a development dependency with cli:
 ```
 $ npm install --save-dev util.filelist
+```
+
+To build the app and run all tests:
+```
+$ npm run all
 ```
 
 ## Example Usage
@@ -37,6 +40,4 @@ An example of the `file.list` above would be:
  line 2
 
 ```
-This would result in an Array with only two lines (line 1 & line 2).  The
-comment line and the blank line are removed and are not placed in the list.  It
-also trims leading and trailing spaces.
+This would result in an Array with only two lines (line 1 & line 2).  The comment line and the blank line are removed and are not placed in the list.  It also trims leading and trailing spaces.
