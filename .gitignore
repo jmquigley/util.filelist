@@ -40,5 +40,3 @@ jspm_packages
 *.js
 *.js.map
 *.d.ts
-!gulpfile.js
-!docs/**/*.js
