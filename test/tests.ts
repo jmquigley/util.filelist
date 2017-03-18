@@ -3,39 +3,23 @@
 import * as assert from 'assert';
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import * as uuid from 'uuid';
+import {Fixture} from 'util.fixture';
+import {debug} from './helpers';
 import {getFileList} from '../index';
-
-const home = require('expand-home-dir');
-
-let unitTestBaseDir = home(path.join('~/', '.tmp', 'unit-test-data'));
-let unitTestDir = home(path.join(unitTestBaseDir, uuid.v4()));
-if (!fs.existsSync(unitTestDir)) {
-	fs.mkdirsSync(unitTestDir);
-}
-let f = path.join(unitTestDir, 'testfile.list');
 
 describe('Testing util.filelist', () => {
 
-	before(() => {
-		let lines = [
-			'# Comment line',
-			'',
-			'	item1',
-			'item2',
-			'',
-			'	item 3   '
-		];
-
-		fs.writeFileSync(f, lines.join('\n'));
-	});
-
-	after('cleanup', () => {
-		fs.removeSync(unitTestBaseDir);
+	after(() => {
+		debug('final cleanup');
+		let directories = Fixture.cleanup();
+		directories.forEach((directory: string) => {
+			assert(!fs.existsSync(directory));
+		});
 	});
 
 	it('Validating file list creation', () => {
-		let lines = getFileList(f);
+		let fixture = new Fixture('simple');
+		let lines = getFileList(path.join(fixture.dir, 'testfile.list'));
 
 		assert(lines instanceof Array);
 		assert(lines.length === 3);
