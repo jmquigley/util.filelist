@@ -8,7 +8,7 @@ export function getFileList(filename: string) {
 	if (fs.existsSync(filename)) {
 		const lines = fs.readFileSync(filename).toString().split(/\r?\n|\r/);
 
-		lines.forEach((line) => {
+		lines.forEach(line => {
 			line = line.trim();
 
 			if (!line.startsWith('#') && line !== '') {

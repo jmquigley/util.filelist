@@ -16,7 +16,7 @@ if (!fs.existsSync(unitTestDir)) {
 const f = path.join(unitTestDir, 'testfile.list');
 
 test.before(t => {
-	let lines = [
+	const lines = [
 		'# Comment line',
 		'',
 		'	item1',
@@ -35,7 +35,7 @@ test.after(t => {
 });
 
 test('Validating file list creation', t => {
-	let lines = getFileList(f);
+	const lines = getFileList(f);
 
 	t.true(lines instanceof Array);
 	t.is(lines.length, 3);
