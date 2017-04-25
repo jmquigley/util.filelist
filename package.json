@@ -18,7 +18,7 @@
   "dependencies": {
     "fs-extra": "^2.1.2",
     "util.pkgwrap": "0.0.26",
-    "util.rstrip": "0.0.16"
+    "util.rstrip": "0.0.17"
   },
   "devDependencies": {
     "@types/fs-extra": "2.1.0",
