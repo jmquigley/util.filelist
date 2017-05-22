@@ -16,31 +16,32 @@
     "node": ">=7.5"
   },
   "dependencies": {
-    "fs-extra": "^2.1.2",
-    "util.pkgwrap": "0.0.26",
-    "util.rstrip": "0.0.17"
+    "fs-extra": "^3.0.1",
+    "util.pkgwrap": "0.0.43",
+    "util.rstrip": "0.0.18"
   },
   "devDependencies": {
-    "@types/fs-extra": "2.1.0",
-    "@types/node": "^7.0.13",
+    "@types/fs-extra": "3.0.1",
+    "@types/node": "^7.0.21",
     "@types/uuid": "^2.0.29",
     "ava": "^0.19.1",
-    "coveralls": "^2.13.0",
+    "coveralls": "^2.13.1",
     "expand-home-dir": "github:jmquigley/expand-home-dir",
-    "nyc": "^10.2.0",
-    "tslint": "^5.1.0",
-    "typescript": "^2.2.2",
+    "nyc": "^10.3.2",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2",
     "uuid": "^3.0.1"
   },
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "all": "npm install && npm run lint && npm install && npm run build && npm test && npm run report",
-    "build": "./node_modules/.bin/pkgwrap --build",
-    "coverage": "./node_modules/.bin/pkgwrap --coverage",
-    "lint": "./node_modules/.bin/pkgwrap --lint",
-    "postinstall": "./node_modules/.bin/pkgwrap --postinstall",
-    "report": "./node_modules/.bin/pkgwrap --reporting",
-    "test": "./node_modules/.bin/pkgwrap --testing --ava"
+    "all": "npm install && npm run clean && npm run lint && npm install && npm run build && npm test && npm run report",
+    "build": "pkgwrap --build",
+    "clean": "pkgwrap --clean",
+    "coverage": "pkgwrap --coverage",
+    "lint": "pkgwrap --lint",
+    "postinstall": "pkgwrap --postinstall",
+    "report": "pkgwrap --reporting",
+    "test": "pkgwrap --testing --ava"
   }
 }
