@@ -6,14 +6,16 @@ Reads a given file list, stores each line in an array, and returns the array.  I
 
 ## Installation
 
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
 To install as a development dependency with cli:
 ```
-$ npm install --save-dev util.filelist
+$ yarn add --dev util.filelist
 ```
 
 To build the app and run all tests:
 ```
-$ npm run all
+$ yarn run all
 ```
 
 ## Example Usage
