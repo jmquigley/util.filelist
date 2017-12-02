@@ -3,6 +3,8 @@
   "version": "0.0.25",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Reads a file list and returns it as an array of values.",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -13,11 +15,10 @@
     "url": "https://github.com/jmquigley/util.filelist/issues"
   },
   "engines": {
-    "node": ">=7.5"
+    "node": ">=7.x"
   },
   "dependencies": {
     "fs-extra": "^4.0.2",
-    "util.pkgwrap": "0.0.73",
     "util.rstrip": "0.0.28"
   },
   "devDependencies": {
@@ -32,15 +33,14 @@
     "typescript": "^2.6.1",
     "uuid": "^3.1.0"
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
   "scripts": {
-    "all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn test && yarn run report",
-    "build": "pkgwrap --build",
+    "all": "yarn install && yarn run build && yarn test && yarn run report",
+    "build": "yarn run clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
     "lint": "pkgwrap --lint",
-    "postinstall": "pkgwrap --postinstall",
+    "preinstall": "yarn global add util.pkgwrap",
+    "prepublishOnly": "yarn run all",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava"
   }
