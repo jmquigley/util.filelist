@@ -17,3 +17,4 @@ test.d.ts
 
 *.js.map
 yarn.lock
+yarn-error.log
