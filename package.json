@@ -1,6 +1,6 @@
 {
   "name": "util.filelist",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Reads a file list and returns it as an array of values.",
   "main": "./index.js",
