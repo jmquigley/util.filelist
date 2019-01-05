@@ -1,6 +1,6 @@
 {
   "name": "util.filelist",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Reads a file list and returns it as an array of values.",
   "main": "./index.js",
@@ -55,7 +55,7 @@
     "notify": false,
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-			"__tests__/helpers"
+      "__tests__/helpers"
     ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
     "transform": {
