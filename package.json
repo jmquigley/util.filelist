@@ -70,7 +70,6 @@
     "coverage": "pkgwrap --coverage --jest",
     "lint": "pkgwrap --lint",
     "prepublishOnly": "yarn run all",
-    "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --jest"
   }
 }
