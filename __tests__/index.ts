@@ -1,6 +1,5 @@
 'use strict';
 
-import test from 'ava';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import * as uuid from 'uuid';
@@ -15,7 +14,7 @@ if (!fs.existsSync(unitTestDir)) {
 }
 const f = path.join(unitTestDir, 'testfile.list');
 
-test.before(t => {
+beforeAll(() => {
 	const lines = [
 		'# Comment line',
 		'',
@@ -26,20 +25,18 @@ test.before(t => {
 	];
 
 	fs.writeFileSync(f, lines.join('\n'));
-	t.pass();
 });
 
-test.after(t => {
+afterAll(() => {
 	fs.removeSync(unitTestBaseDir);
-	t.pass();
 });
 
-test('Validating file list creation', t => {
+test('Validating file list creation', () => {
 	const lines = getFileList(f);
 
-	t.true(lines instanceof Array);
-	t.is(lines.length, 3);
-	t.is(lines[0], 'item1');
-	t.is(lines[1], 'item2');
-	t.is(lines[2], 'item 3');
+	expect(lines instanceof Array).toBe(true);
+	expect(lines.length).toBe(3);
+	expect(lines[0]).toBe('item1');
+	expect(lines[1]).toBe('item2');
+	expect(lines[2]).toBe('item 3');
 });
