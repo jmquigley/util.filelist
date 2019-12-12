@@ -2,12 +2,12 @@
 
 > Reads a file list and returns it as an array of values.
 
-[![build](https://circleci.com/gh/jmquigley/util.filelist/tree/master.svg?style=shield)](https://circleci.com/gh/jmquigley/util.filelist/tree/master)
+[![build](https://github.com/jmquigley/util.string/workflows/build/badge.svg)](https://github.com/jmquigley/util.string/actions)
 [![analysis](https://img.shields.io/badge/analysis-tslint-9cf.svg)](https://palantir.github.io/tslint/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![testing](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
 [![NPM](https://img.shields.io/npm/v/util.filelist.svg)](https://www.npmjs.com/package/util.filelist)
-[![coverage](https://coveralls.io/repos/github/jmquigley/util.filelist/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.filelist?branch=master)
+
 
 Reads a given file list, stores each line in an array, and returns the array.  It ignore blank lines and comments (`#` character).  Each line is delimited by the newline characters.
 

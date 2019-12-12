@@ -1,5 +1,3 @@
-"use strict";
-
 import * as fs from "fs-extra";
 
 export function getFileList(filename: string) {
@@ -11,7 +9,7 @@ export function getFileList(filename: string) {
 			.toString()
 			.split(/\r?\n|\r/);
 
-		lines.forEach((line) => {
+		lines.forEach(line => {
 			line = line.trim();
 
 			if (!line.startsWith("#") && line !== "") {

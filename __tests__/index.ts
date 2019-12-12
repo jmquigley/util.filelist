@@ -1,9 +1,7 @@
-"use strict";
-
 import * as fs from "fs-extra";
 import * as path from "path";
 import * as uuid from "uuid";
-import {getFileList} from "../index";
+import { getFileList } from "../index";
 
 const home = require("expand-home-dir");
 
