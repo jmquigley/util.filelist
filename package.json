@@ -24,7 +24,7 @@
 		"index.d.ts"
 	],
 	"dependencies": {
-		"fs-extra": "^8.1.0",
+		"fs-extra": "^9.0.0",
 		"util.rstrip": "0.0.58"
 	},
 	"devDependencies": {
